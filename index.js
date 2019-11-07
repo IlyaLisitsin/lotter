@@ -26,7 +26,6 @@ async function init() {
         })
         .use(bodyParser.json({ limit: '50mb' }))
         // .use(bodyParser.urlencoded({ limit: '50mb', extended: true }))
-        .use(require('./routes'))
         .use(function (err, req, res, next) {
             console.error(err.stack);
             // res.status(500).json(new Response({ errorMessage: err.message }));
