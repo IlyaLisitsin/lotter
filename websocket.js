@@ -19,7 +19,14 @@ async function wsInit(wss) {
                     case 'create-bet':
                         const { value, betAddress, creatorAddress } = data;
 
-                        const newBet = { value, creatorAddress, betAddress, isFinished: false, _id: mongoose.Types.ObjectId() };
+                        const newBet = {
+                            _id: mongoose.Types.ObjectId(),
+                            value,
+                            creatorAddress,
+                            betAddress,
+                            isFinished: false
+                        };
+
                         betCollection.push(newBet);
                         new Bet(newBet).save();
                         break;

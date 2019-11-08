@@ -1,16 +1,14 @@
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
-// constcompile = require('./compile');
 
 const provider = new HDWalletProvider(
-    'stadium suit leisure cube spy leave thunder tomato theory kingdom physical all',
+    process.env.FACTORYWALL,
     'https://ropsten.infura.io/v3/709050cee8734ea18175fd47af6be8f0',
 );
 
 const web3 = new Web3(provider);
 
 const compiledFactory = require('./build/BetFactory');
-const compiledBet = require('./build/Bet');
 
 let factoryAddress;
 const deploy = async () => {
@@ -30,4 +28,4 @@ const deploy = async () => {
 
 };
 
-// deploy();
+deploy();

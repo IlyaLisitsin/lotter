@@ -3,7 +3,6 @@ const fs = require('fs-extra');
 const solc = require('solc');
 
 const buildPath = path.resolve(__dirname, 'build');
-// fs.removeSync(buildPath);
 
 const betPath = path.resolve(__dirname, 'contracts', 'Bet.sol');
 const source = fs.readFileSync(betPath, 'utf-8');

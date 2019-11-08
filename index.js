@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const WebSocketServer = require('ws').Server;
@@ -13,7 +14,7 @@ const Bet = mongoose.model('Bet');
 
 async function init() {
     await mongoose.connect(
-        'mongodb+srv://illia:illia@cluster0-kkfdg.mongodb.net/bets?retryWrites=true&w=majority',
+        process.env.DBURL,
         { useUnifiedTopology: true },
     );
 
@@ -36,7 +37,7 @@ async function init() {
 
     wsInit(wss);
 
-    server.listen(5500);
+    server.listen(process.env.PORT || 5500);
 }
 
 init();

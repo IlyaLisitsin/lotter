@@ -142,3 +142,5 @@ webui/.npmrc
 MC-Prod.txt.10-21-2019
 mqjms.log.0
 mqjms.log.0.lck
+
+.env

@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
     "test": "mocha 'etherum/tests/*.js'",
     "start": "node index.js",
@@ -21,6 +24,7 @@
   "dependencies": {
     "@truffle/hdwallet-provider": "^1.0.22",
     "@types/web3": "^1.0.20",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "fs-extra": "^8.1.0",
     "ganache-cli": "^6.7.0",
